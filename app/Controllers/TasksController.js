@@ -27,9 +27,9 @@ export class TasksController{
   }
 
 
-  removeTask(id){
-    if (window.confirm('Have you completed this or are you being lazy?..')) {
-      tasksService.removeTask(id)
-    }
-  }
+  // removeTask(id){
+  //   if (window.confirm('Have you completed this or are you being lazy?..')) {
+  //     tasksService.removeTask(id)
+  //   }
+  // }
 }

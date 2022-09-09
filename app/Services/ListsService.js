@@ -15,19 +15,19 @@ saveState('lists', appState.lists)
 
 
 
-  toggleCompleted(id){
-let list = appState.lists.find(list => list.id == id)
+//   toggleCompleted(id){
+// let list = appState.lists.find(list => list.id == id)
 
-if (!list) {
-  throw new Error('Bad ID')
-}
+// if (!list) {
+//   throw new Error('Bad ID')
+// }
 
-list.completed = !list.completed
-appState.emit('lists')
-saveState('lists', appState.lists)
+// list.completed = !list.completed
+// appState.emit('lists')
+// saveState('lists', appState.lists)
 
 
-  }
+//   }
 }
 
 

@@ -16,10 +16,10 @@ export class ListsController{
 
   constructor(){
     // draw List on start
-_drawLists()
-//any Change to List.js redraws it
-appState.on('lists', _drawLists)
-appState.on('tasks', _drawLists)
+    //any Change to List.js redraws it
+    appState.on('lists', _drawLists)
+    appState.on('tasks', _drawLists)
+    _drawLists()
   }
 
 
@@ -29,8 +29,8 @@ appState.on('tasks', _drawLists)
       const form = window.event.target
       let newList = getFormData(form)
       listsService.createList(newList)
-console.log('newList form Data',newList);
-
+// console.log('newList form Data',newList);
+form.reset()
 
     } catch (error) {
       console.error('[CREATE_LIST',error);
@@ -38,8 +38,6 @@ console.log('newList form Data',newList);
   }
 
 
-  toggleCompleted(id){
 
-  }
 
 }

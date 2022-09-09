@@ -19,21 +19,19 @@ this.completed = data.completed || false
     
     <div class="col-md-4 mt-5 mx-2">
     <div class="card bg-light elevation-1">
-      <div>
-      ${this.completed ?'<i class="fs-4 mdi mdi-tab-remove m-2 p-1 rounded selectable" onclick=""></i>': 'not completed'}
-      </div>
+      
       <div class="text-center  rounded">
         <h6 class="">${this.type} </h6>
         <h6 class="">${this.name} </h6>
-        <p></p>
+        <p>${this.Tasks.length}</p>
         <div class="text-center rounded">
          
         </div>
       </div>
     </div>
     <div class="bg-dark text-light rounded elevation-1">
-      <ul class="group-list">
-     ${this.TaskTemplate}
+      <ul class="group-list bg-dark p-1">
+  ${this.TaskTemplate}
       </ul>
       <div class="d-flex justify-content-center">
         <form onsubmit="app.tasksController.createTask('${this.id}')">
@@ -44,7 +42,7 @@ this.completed = data.completed || false
          
            
             <button class="btn btn-secondary ms-3 elevation-3 " type="submit">
-                     <i class="mdi mdi-plus-box"  ></i>
+                  add
                   </button>
           </div>
 
@@ -66,10 +64,16 @@ get Tasks(){
   let tasks = appState.tasks.filter(task => task.listId == this.id)
   return tasks
 }
-get TaskCount(){
-  let total=0
-  this.Tasks.forEach(task => total += task.amount)
-  return total
-}
+// get TaskCount(){
+//   let total=0
+//   this.Tasks.forEach(task => total += task.amount)
+//   return total
+// }
 
+/**
+ * 
+ * <div>
+      ${this.completed ?'<i class="fs-4 mdi mdi-tab-remove m-2 p-1 rounded selectable" onclick=""></i>': 'not completed'}
+      </div>
+ */
 }
