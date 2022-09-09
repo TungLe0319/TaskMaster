@@ -1,0 +1,11 @@
+/* BASIC STYLES HERE */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Oswald&family=Roboto&display=swap');
+*{
+  font-family: 'Audiowide', cursive;
+}
+
+main{
+  background-image: url(https://wallpapercave.com/wp/wp7492076.jpg);
+  background-size: cover;
+  background-position: center;
+}
