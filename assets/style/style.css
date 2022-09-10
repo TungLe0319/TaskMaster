@@ -41,16 +41,20 @@ main{
 }
 
 .redhover:hover{
-color: red;
+color: rgb(225, 36, 36);
 transform: scale(1.5);
 transition: all 0.5s ease;
 }
 
+.unfocusedCard{
+  opacity: 80%;
+}
 
 .wow:hover{
-  
+  filter: contrast(110%);
+  filter: brightness(110%);
   transform: scale(1.03);
-
+opacity: 100%;
   transition: all 0.5s ease;
 }
 
@@ -64,4 +68,14 @@ transition: all 0.5s ease;
 }
  .bgCustom2{
   background-color: #2e6b78;
+ }
+
+ .invert:hover{
+  filter: invert(100%);
+  transition: all 0.5s ease;
+ }
+ ._formlabel{
+top: -0.5rem;
+font-size: 0.8rem;
+left: 0.8rem;
  }

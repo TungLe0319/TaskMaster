@@ -45,45 +45,37 @@
   <body class="">
     <header>
       <nav
-        class="navbar navbar-dark navbar-expand bg-dark text-light no-select elevation-5 "
+        class="navbar  navbar-dark navbar-expand bg-dark text-light d-flex justify-content-center no-select elevation-5 "
       >
-        <a class="navbar-brand ms-3" href="#">
-          <img
-            src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png"
-            height="45"
-            alt=""
-            loading="lazy"
-          />
-          <span class="ms-2">Task Master</span>
-        </a>
+        <h1 class="text-light elevation-5 p-2 rounded  waves">TASK MASTER</h1>
       </nav>
     </header>
     <main class="bg-light">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 d-flex justify-content-center mt-3 ">
-            <h1 class="text-light elevation-5 p-2 rounded  waves">TASK MASTER</h1>
+            
           </div>
           <div class="col-md-12 d-flex ">
             <!-- -----------SECTION FORM HERE -->
-            <form onsubmit="app.listsController.createList()" class="">
+            <form onsubmit="app.listsController.createList()" class="ms-5">
               <div class="d-flex mt-4">
-                <div class="form-floating w-100">
+                <div class="form-floating w-100 border-bottom">
                   <input
                     type="text"
-                    class="form-control  waves text-light ms-3"
+                    class="form-control-plaintext text-light ms-3"
                    name="name"
                    minlength="3"
                    required
                   />
-                  <label for="name" class="text-light ms-3">List Name</label>
+                  <label for="name" class="text-light ms-3">List Name...</label>
                 </div>
                 <!-- --------------- -->
          
                 <!-- ----------------- -->
 
                 <div class="d-flex align-items-center ms-3">
-                  <span class="mx-2"><h6> List Color:</h6></span>
+                  <span class="mx-2 text-light"><h6> List Color:</h6></span>
                   
                   <label for="color" class="form-label"></label>
               <input
@@ -147,7 +139,7 @@
       </div>
 
       <section class="container-fluid">
-      
+     
       </section>
     </main>
 

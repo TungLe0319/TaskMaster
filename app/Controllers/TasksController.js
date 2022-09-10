@@ -30,7 +30,7 @@ tasksService.toggleChecked(id)
   }
 
   removeTask(id) {
-    if (window.confirm()) {
+    if (Pop.confirm()) {
       tasksService.removeTask(id);
     }
   }

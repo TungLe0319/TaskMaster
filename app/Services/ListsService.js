@@ -1,5 +1,6 @@
 import { appState } from '../AppState.js';
 import { List } from '../Models/List.js';
+import { Pop } from "../Utils/Pop.js";
 import { saveState } from '../Utils/Store.js';
 
 class ListsService {
@@ -24,6 +25,7 @@ class ListsService {
     }
 
     list.completed = !list.completed;
+    Pop.toast('Task Mastered!','success',"top-end",1000,true)
     appState.emit('lists');
     saveState('lists', appState.lists);
   }

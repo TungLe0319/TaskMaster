@@ -17,26 +17,28 @@ export class List {
   get ListTemplate() {
     return /*html */ `
     
-    <div class="col-md-3 mt-5 mx-2 wow  " >
+    <div class="col-md-3 mt-5 mx-2 wow unfocusedCard" >
     <div class=" p-2 rounded-top"  style="background-color:${this.color};"></div>
     <div class="bgCustom1 rounded-bottom" id="accordionExample" >
     <div class="accordion-item rounded">
       
      <div class="p-1 ms-3 d-flex justify-content-between">
   
-     <i class="fs-4 mdi mdi-tab-remove rounded text-danger selectable" onclick="app.listsController.removeList('${this.id}')"></i>
+     <i class="fs-4 mdi mdi-card-remove rounded  cursor redhover " onclick="app.listsController.removeList('${this.id}')"></i>
      
-     <span class="d-flex align-items-center fs-5 fw-bold">
+     <span class="d-flex align-items-center fs-5 fw-bold ">
      ${this.name}
      </span>
-     <button class=" bg-dark rounded text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${this.id}" aria-expanded="true" aria-controls="collapseOne"><i class="mdi mdi-arrow-collapse"></i></button>
+     <button class=" bg-dark rounded text-light invert" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${this.id}" aria-expanded="true" aria-controls="collapseOne"><i class="mdi mdi-arrow-collapse"></i></button>
      
      </div>
      <div class="d-flex justify-content-center mt-1 mb-2"><span class="">
      <small>
      ${this.CheckedTasks.length}/${this.Tasks.length}
      </small></span></div>
-      
+     
+  
+ </div>
     
       <div id="collapse${this.id}" class="accordion-collapse collapse show " aria-labelledby="headingOne" >
         <div class="accordion-body bgCustom2 rounded-bottom" >
@@ -44,11 +46,11 @@ export class List {
           <div class="d-flex justify-content-center rounded">
 
 <form onsubmit="app.tasksController.createTask('${this.id}')" >
-<div class="d-flex  ">
-  <div class="p-1 d-flex mb-2  ">
-    <input class="form-control-plaintext text-light ms-3" type="text" required minlength="2" name="name" placeholder="Add Task..."/>
+<div class="d-flex elevation-4 rounded my-1 ">
+  <div class="d-flex mb-2 align-items-end">
+    <input class=" form-control-plaintext text-light ms-3 border-bottom h-50 " type="text" required minlength="3" name="name" placeholder="Add task"/>
     <label for="name" class="visually-hidden">Name</label>
-    <button type="submit" class="btn border-0 ms-5 mt-1 " title="Add Item"><i class="mdi mdi-plus-box fs-2 text-light cursor" type="submit"></i></button>
+    <button type="submit" class="btn border-0 mt-1 " title="Add Item"><i class="mdi mdi-plus-box fs-2 invert text-light cursor" ></i></button>
   </div>
   </div>
   </form>
