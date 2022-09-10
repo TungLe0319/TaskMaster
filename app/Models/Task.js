@@ -15,7 +15,7 @@ export class Task {
   get TaskTemplate() {
     return /*html*/ `
     <li
-    class="group-list-item p-1 ms-3 d-flex  text-light  justify-content-between align-items-center "
+    class="group-list-item p-1 ms-3 d-flex  text-light  justify-content-between align-items-center ${this.checked ? 'animate__rubberBand animate__animated': ''}"
   >
   <input onchange="app.tasksController.toggleChecked('${this.id}')" class="ms-2 " type="checkbox" ${
     this.checked ? 'checked' : ''

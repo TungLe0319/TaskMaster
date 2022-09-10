@@ -1,6 +1,7 @@
 import { appState } from '../AppState.js';
 import { listsService } from '../Services/ListsService.js';
 import { getFormData } from '../Utils/FormHandler.js';
+import { Pop } from "../Utils/Pop.js";
 import { setHTML } from '../Utils/Writer.js';
 
 function _drawLists() {
@@ -37,7 +38,7 @@ export class ListsController {
   }
 
   removeList(id){
-if (window.confirm('are you sure or are you just gonna procrastinate it?')) {
+if (Pop.confirm()) {
   
   listsService.removeList(id)
 }

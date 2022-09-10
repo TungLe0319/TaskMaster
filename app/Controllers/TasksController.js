@@ -1,3 +1,6 @@
+
+
+
 import { appState } from '../AppState.js';
 import { tasksService } from '../Services/TasksService.js';
 import { getFormData } from '../Utils/FormHandler.js';
@@ -27,7 +30,7 @@ tasksService.toggleChecked(id)
   }
 
   removeTask(id) {
-    if (Pop.confirm('Procrastinor...')) {
+    if (window.confirm()) {
       tasksService.removeTask(id);
     }
   }

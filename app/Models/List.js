@@ -1,3 +1,4 @@
+;
 import { appState } from '../AppState.js';
 import { ListsController } from '../Controllers/ListsController.js';
 import { listsService } from '../Services/ListsService.js';
@@ -16,7 +17,7 @@ export class List {
   get ListTemplate() {
     return /*html */ `
     
-    <div class="col-md-4 mt-5 mx-2 " >
+    <div class="col-md-4 mt-5 mx-2  " >
     <div class=" p-2 rounded-top"  style="background-color:${this.color};"></div>
     <div class="bgCustom1 rounded-bottom" id="accordionExample" >
     <div class="accordion-item rounded">
@@ -24,14 +25,17 @@ export class List {
      <div class="p-1 ms-3 d-flex justify-content-between">
   
      <i class="fs-4 mdi mdi-tab-remove rounded text-danger selectable" onclick="app.listsController.removeList('${this.id}')"></i>
-     <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">HI</button>
+     
      <span class="d-flex align-items-center">
      ${this.name}
      </span>
      <button class=" bg-dark  text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${this.id}" aria-expanded="true" aria-controls="collapseOne"><i class="mdi mdi-arrow-collapse"></i></button>
      
      </div>
-     <div class="d-flex justify-content-center my-1"><span class="">${this.CheckedTasks.length}</span>/${this.Tasks.length}</div>
+     <div class="d-flex justify-content-center mt-1 mb-2"><span class="">
+     <small>
+     ${this.CheckedTasks.length}/${this.Tasks.length}
+     </small></span></div>
       
     
       <div id="collapse${this.id}" class="accordion-collapse collapse show " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -75,7 +79,8 @@ export class List {
   }
   get CheckedTasks(){
 let checked = appState.tasks.filter(task => task.checked == true)
-return checked
+let listCheck = checked.filter(task => task.listId == this.id)
+return listCheck
   }
 
 

@@ -17,7 +17,7 @@ class ListsService {
   }
 
   toggleCompleted(id) {
-    let list = appState.lists.find((list) => list.id == id);
+    let list = appState.lists.find((list) => list.id === id);
 
     if (!list) {
       throw new Error('Bad ID');
