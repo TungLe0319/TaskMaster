@@ -15,12 +15,12 @@ export class Task {
   get TaskTemplate() {
     return /*html*/ `
     <li
-    class="group-list-item p-1 ms-3 d-flex justify-content-between align-items-center "
+    class="group-list-item p-1 ms-3 d-flex  text-light  justify-content-between align-items-center "
   >
-  <input onchange="" class="ms-2" type="checkbox" ${
-    this.checked ? '' : 'checked'
+  <input onchange="app.tasksController.toggleChecked('${this.id}')" class="ms-2 " type="checkbox" ${
+    this.checked ? 'checked' : ''
   }>
-    <p >${this.name}</p>
+    <span class="mt-3"><p >${this.name}</p></span>
     <p ></p>
     <i class="mdi mdi-trash-can me-3 fs-4 selectable redhover" onclick="app.tasksController.removeTask('${
       this.id

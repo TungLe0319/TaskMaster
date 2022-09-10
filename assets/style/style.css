@@ -11,8 +11,13 @@
 
 }
 
+
+::placeholder{
+  color: white;
+}
+
 main{
-  background-image: url(https://wallpapercave.com/wp/wp7492076.jpg);
+  background-image: url(https://media4.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/giphy.gif?cid=ecf05e472kbddo84dqvct8xdqgz5erbc54wq5lh3fv6jgjoc&rid=giphy.gif&ct=g);
   background-size: cover;
   background-position: center;
 }
@@ -23,13 +28,13 @@ main{
 }
 
 
-/* .cardlights{
+.cardlights{
   background-image: url(https://media4.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/giphy.gif?cid=ecf05e472kbddo84dqvct8xdqgz5erbc54wq5lh3fv6jgjoc&rid=giphy.gif&ct=g);
   background-size: cover;
   background-position: center;
  
   
-} */
+}
 
 .bgCustom1{
   background-color: var(--primary);

@@ -18,5 +18,17 @@ class TasksService {
     appState.tasks = leftovers;
     saveState('tasks', appState.tasks);
   }
+
+
+  toggleChecked(id){
+let task = appState.tasks.find(task =>task.id == id)
+if (!task) {
+  throw new Error('Bad ID')
+}
+
+task.checked = !task.checked
+appState.emit('tasks')
+saveState('tasks', appState.tasks)
+  }
 }
 export const tasksService = new TasksService();
