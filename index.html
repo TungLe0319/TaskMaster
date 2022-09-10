@@ -56,42 +56,43 @@
     <main class="bg-info">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 d-flex justify-content-center mt-3">
-            <h1 class="text-light elevation-5 p-2 rounded">TASK MASTER</h1>
+          <div class="col-md-12 d-flex justify-content-center mt-3 ">
+            <h1 class="text-light elevation-5 p-2 rounded  waves">TASK MASTER</h1>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12 d-flex ">
             <!-- -----------SECTION FORM HERE -->
             <form onsubmit="app.listsController.createList()" class="">
-              <div class="d-flex elevation-3">
-                <div class="form-floating w-50">
+              <div class="d-flex ">
+                <div class="form-floating w-100">
                   <input
                     type="text"
-                    class="form-control opacity-50"
+                    class="form-control  waves text-light"
                    name="name"
-                    placeholder=""
+                   minlength="3"
+                   required
                   />
-                  <label for="name">List Name</label>
+                  <label for="name" class="text-light">List Name</label>
                 </div>
                 <!-- --------------- -->
-                <div class="input-group mb-3">
-                  <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                <div class="input-group  ">
+                  <button class="btn  dropdown-toggle h-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Type</button>
                   <ul class="dropdown-menu">
                    <select class="form-select" name="type" >
-<option selected value="Chore">Chore</option>
+<option  value="Chore">Chore</option>
 <option value="Groceries">Groceries</option>
 <option value="Vacation">Vacation</option>
 
                    </select>
-                   <label for="type" class="p-1 d-flex justify-content-center">List Type</label>
+                   <label for="type" class="p-1 d-flex justify-content-center"></label>
                   </ul>
                   
                 </div>
                 <!-- ----------------- -->
 
-                <div class="d-flex align-items-center ms-3">
+                <div class="d-flex align-items-center">
                   <span class="">Color:</span>
                   <input type="color" name="" id="" class="elevation-5 ms-2" disabled/>
-                  <button class="btn btn-secondary ms-3 elevation-3" type="submit">
+                  <button class="btn btn-primary ms-3 elevation-3" type="submit">
                     Create
                   </button>
                 </div>
@@ -99,7 +100,7 @@
             </form>
            
           </div>
-          <div class="col-12 scrollable-x" id="lists">
+          <div class="col-12 scrollable-x d-flex" id="lists">
             <!-- --------SECTION LISTS TEMPLATE/DRAW HERE----------------------------- -->
             <!-- <div class="col-md-4 mt-5 mx-2">
               <div class="card bg-light elevation-1">
@@ -137,10 +138,15 @@
               </div>
             </div> -->
 
+            
             <!-- -------------------------------------- -->
           </div>
         </div>
       </div>
+
+      <section class="container-fluid">
+      
+      </section>
     </main>
 
     <footer class="bg-dark text-light"></footer>

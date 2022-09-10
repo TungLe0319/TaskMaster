@@ -1,34 +1,32 @@
-import { appState } from "../AppState.js"
-import { List } from "../Models/List.js"
-import { saveState } from "../Utils/Store.js";
+import { appState } from '../AppState.js';
+import { List } from '../Models/List.js';
+import { saveState } from '../Utils/Store.js';
 
-class ListsService{
-
- 
-
-  createList(newList){
-let list = new List(newList)
-appState.lists = [list, ...appState.lists]
-// console.log('createList, List Service',appState.lists);
-saveState('lists', appState.lists)
+class ListsService {
+  createList(newList) {
+    let list = new List(newList);
+    appState.lists = [list, ...appState.lists];
+    // console.log('createList, List Service',appState.lists);
+    saveState('lists', appState.lists);
   }
 
+  removeList(id) {
+    let leftovers = appState.lists.filter((list) => list.id !== id);
+    appState.lists = leftovers;
+    saveState('lists', appState.lists);
+  }
 
+  toggleCompleted(id) {
+    let list = appState.lists.find((list) => list.id == id);
 
-//   toggleCompleted(id){
-// let list = appState.lists.find(list => list.id == id)
+    if (!list) {
+      throw new Error('Bad ID');
+    }
 
-// if (!list) {
-//   throw new Error('Bad ID')
-// }
-
-// list.completed = !list.completed
-// appState.emit('lists')
-// saveState('lists', appState.lists)
-
-
-//   }
+    list.completed = !list.completed;
+    appState.emit('lists');
+    saveState('lists', appState.lists);
+  }
 }
 
-
-export  const listsService = new ListsService()
+export const listsService = new ListsService();

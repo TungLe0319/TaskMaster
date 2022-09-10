@@ -1,34 +1,39 @@
-import { generateId } from "../Utils/generateId.js";
+import { TasksController } from '../Controllers/TasksController.js';
+import { tasksService } from '../Services/TasksService.js';
+import { generateId } from '../Utils/generateId.js';
 
-export class Task{
-  constructor(data){
-this.id = generateId()
-this.listId = data.listId
-this.name = data.name
-
+export class Task {
+  constructor(data) {
+    // I DIDN't HAVE the data.id || and whenever i refreshed the page it generated a new Id and when i retrieved it from local storage it changed the listId
+    this.id = data.id || generateId();
+    this.listId = data.listId;
+    this.name = data.name;
+    this.checked = data.checked || false;
   }
 
-
-// ADD A COOL EFFECT FOR WHEN A NEW TASK IS ADDED AND REMOVED
-  get TaskTemplate(){
+  // ADD A COOL EFFECT FOR WHEN A NEW TASK IS ADDED AND REMOVED
+  get TaskTemplate() {
     return /*html*/ `
     <li
-    class="group-list-item p-1 ms-3 d-flex justify-content-between align-items-center"
+    class="group-list-item p-1 ms-3 d-flex justify-content-between align-items-center "
   >
-    <input type="checkbox" class="" />
+  <input onchange="" class="ms-2" type="checkbox" ${
+    this.checked ? '' : 'checked'
+  }>
     <p >${this.name}</p>
-    
+    <p ></p>
+    <i class="mdi mdi-trash-can me-3 fs-4 selectable redhover" onclick="app.tasksController.removeTask('${
+      this.id
+    }')" title="Remove"></i>
    
     
   </li>
   
     
-    `
+    `;
   }
 }
 
-
 /**
- * 
- * <i class="mdi mdi-trash-can me-3 fs-4 selectable" onclick="app.tasksController.removeTask('${this.id}')" title="Remove"></i>
+ *   <input type="checkbox" class="" ${this.checked? 'checked' : ''} />
  */

@@ -4,8 +4,39 @@
   font-family: 'Audiowide', cursive;
 }
 
+
+:root{
+--primary : #f0f8f8;
+
+
+}
+
 main{
   background-image: url(https://wallpapercave.com/wp/wp7492076.jpg);
   background-size: cover;
   background-position: center;
 }
+.waves{
+  background-image: url(https://media3.giphy.com/media/Q5idwzxmoRkBdiEVpu/giphy.gif?cid=ecf05e47ojby4zryb04irys610ks7tnmqtponwewo5yv0epv&rid=giphy.gif&ct=g);
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* .cardlights{
+  background-image: url(https://media4.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/giphy.gif?cid=ecf05e472kbddo84dqvct8xdqgz5erbc54wq5lh3fv6jgjoc&rid=giphy.gif&ct=g);
+  background-size: cover;
+  background-position: center;
+ 
+  
+} */
+
+.bgCustom1{
+  background-color: var(--primary);
+}
+
+.redhover:hover{
+color: red;
+transition: all .5s ease;
+}
+
