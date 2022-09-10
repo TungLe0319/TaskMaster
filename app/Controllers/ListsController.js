@@ -38,9 +38,9 @@ export class ListsController {
   }
 
   removeList(id){
-if (Pop.confirm()) {
-  
+ 
+  Pop.success()
   listsService.removeList(id)
-}
+
   }
 }

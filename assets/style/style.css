@@ -1,7 +1,7 @@
 /* BASIC STYLES HERE */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Oswald&family=Roboto&display=swap');
 *{
-  font-family: 'Audiowide', cursive;
+  font-family: 'Roboto-mono', cursive;
 }
 
 
@@ -17,12 +17,12 @@
 }
 
 main{
-  background-image: url(https://media4.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/giphy.gif?cid=ecf05e472kbddo84dqvct8xdqgz5erbc54wq5lh3fv6jgjoc&rid=giphy.gif&ct=g);
+  background-image: url(https://wallpapercave.com/wp/wp5103871.jpg);
   background-size: cover;
   background-position: center;
 }
 .waves{
-  background-image: url(https://media3.giphy.com/media/Q5idwzxmoRkBdiEVpu/giphy.gif?cid=ecf05e47ojby4zryb04irys610ks7tnmqtponwewo5yv0epv&rid=giphy.gif&ct=g);
+  background-image: url(https://media1.giphy.com/media/Q5idwzxmoRkBdiEVpu/giphy.gif?cid=ecf05e47ka3benppu145mtszhpughsg3tx359tgya0h3fs6u&rid=giphy.gif&ct=g);
   background-size: cover;
   background-position: center;
 }
@@ -42,6 +42,26 @@ main{
 
 .redhover:hover{
 color: red;
-transition: all .5s ease;
+transform: scale(1.5);
+transition: all 0.5s ease;
 }
 
+
+.wow:hover{
+  
+  transform: scale(1.03);
+
+  transition: all 0.5s ease;
+}
+
+.text-success{
+  color: #1ef11e !important;
+}
+
+.cursor{
+  user-select: none;
+  cursor: pointer;
+}
+ .bgCustom2{
+  background-color: #2e6b78;
+ }

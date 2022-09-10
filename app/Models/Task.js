@@ -15,14 +15,14 @@ export class Task {
   get TaskTemplate() {
     return /*html*/ `
     <li
-    class="group-list-item p-1 ms-3 d-flex  text-light  justify-content-between align-items-center ${this.checked ? 'animate__rubberBand animate__animated': ''}"
+    class="group-list-item p-1  d-flex  text-light selectable justify-content-between align-items-center  " onclick="app.tasksController.toggleChecked('${this.id}')"
   >
-  <input onchange="app.tasksController.toggleChecked('${this.id}')" class="ms-2 " type="checkbox" ${
+  <input onchange="app.tasksController.toggleChecked('${this.id}')" class="ms-2 cursor " type="checkbox" ${
     this.checked ? 'checked' : ''
   }>
-    <span class="mt-3"><p >${this.name}</p></span>
+    <span class="mt-3 ${this.checked? 'animate__bounce animate__animated text-success': 'animate__bounce'}"><p>${this.checked? '<del>' : ''}${this.name}</del></p></span>
     <p ></p>
-    <i class="mdi mdi-trash-can me-3 fs-4 selectable redhover" onclick="app.tasksController.removeTask('${
+    <i class="mdi mdi-trash-can me-3 fs-4 cursor redhover" onclick="app.tasksController.removeTask('${
       this.id
     }')" title="Remove"></i>
    

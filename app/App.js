@@ -8,7 +8,7 @@ import { Pop } from "./Utils/Pop.js";
 class App {
 listsController = new ListsController()
 tasksController = new TasksController()
-pop = new Pop
+pop = new Pop()
 
 
 
