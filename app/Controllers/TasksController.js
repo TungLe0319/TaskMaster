@@ -30,8 +30,8 @@ tasksService.toggleChecked(id)
     }
   }
 
-  removeTask(id) {
-    if (window.confirm('Are you sure?')) {
+  async removeTask(id) {
+    if ( await Pop.confirm()) {
       tasksService.removeTask(id);
     }
   }
