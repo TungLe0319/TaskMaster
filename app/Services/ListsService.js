@@ -25,7 +25,7 @@ class ListsService {
     }
 
     list.completed = !list.completed;
-    Pop.toast('Task Mastered!','success',"top-end",1000,true)
+    // Pop.toast('Task Mastered!','success',"top-end",1000,true)
     appState.emit('lists');
     saveState('lists', appState.lists);
   }

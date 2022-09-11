@@ -7,6 +7,7 @@ class TasksService {
   constructor() {}
 
   createTask(newTask) {
+   
     let task = new Task(newTask);
     appState.tasks = [task, ...appState.tasks];
     // console.log(task);
@@ -28,7 +29,7 @@ if (!task) {
 }
 
 task.checked = !task.checked
-Pop.toast('Good Job! 👍 ', "success", "top-end", 1000)
+// Pop.toast('Good Job! 👍 ', "success", "top-end", 1000)
 appState.emit('tasks')
 saveState('tasks', appState.tasks)
   }

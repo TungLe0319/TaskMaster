@@ -39,8 +39,10 @@ export class ListsController {
 
   removeList(id){
  
-  Pop.success()
+if (window.confirm('Are you sure?')) {
+  
   listsService.removeList(id)
+}
 
   }
 }
