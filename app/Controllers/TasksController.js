@@ -32,7 +32,7 @@ tasksService.toggleChecked(id)
   }
 
   async removeTask(id) {
-    if ( await Pop.confirm('Are you finished or are you procrastinating?','','Procrastinate','question')) {
+    if ( await Pop.confirm('Remove Task','Are you finished or are you procrastinating?','Remove','question')) {
       tasksService.removeTask(id);
     }
   }

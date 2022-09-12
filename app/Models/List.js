@@ -39,7 +39,7 @@ export class List {
   
  </div>
     
-      <div id="collapse${this.id}" class="accordion-collapse collapse show " aria-labelledby="headingOne" >
+      <div id="collapse${this.id}" class="accordion-collapse collapse show" aria-labelledby="headingOne" >
         <div class="accordion-body bgCustom2 rounded-bottom" >
          ${this.TaskTemplate}
           <div class="d-flex justify-content-center rounded">

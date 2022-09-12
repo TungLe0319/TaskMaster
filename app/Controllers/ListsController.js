@@ -37,9 +37,9 @@ export class ListsController {
     listsService.toggleCompleted(id);
   }
 
-  removeList(id){
+   async removeList(id){
  
-if (window.confirm('Are you sure?')) {
+if (await Pop.confirm('Removing List', 'Are You Sure?','Yes','question' )) {
   
   listsService.removeList(id)
 }
