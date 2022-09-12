@@ -29,7 +29,8 @@ if (!task) {
 }
 
 task.checked = !task.checked
-// Pop.toast('Good Job! 👍 ', "success", "top-end", 1000)
+
+
 appState.emit('tasks')
 saveState('tasks', appState.tasks)
   }

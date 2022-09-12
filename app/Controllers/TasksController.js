@@ -13,6 +13,7 @@ export class TasksController {
   constructor() {}
 
   toggleChecked(id){
+ 
 tasksService.toggleChecked(id)
   }
 
@@ -31,7 +32,7 @@ tasksService.toggleChecked(id)
   }
 
   async removeTask(id) {
-    if ( await Pop.confirm()) {
+    if ( await Pop.confirm('Are you finished or are you procrastinating?','','Procrastinate','question')) {
       tasksService.removeTask(id);
     }
   }
