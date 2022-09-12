@@ -1,7 +1,7 @@
 /* BASIC STYLES HERE */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Oswald&family=Roboto&display=swap');
 *{
-  font-family: 'Roboto-mono', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -43,11 +43,11 @@ main{
 .redhover:hover{
 
 transform: scale(1.5);
-transition: all 0.5s ease;
+transition: all 0.2s ease;
 }
 
 .unfocusedCard{
-  opacity: 80%;
+  opacity: 85%;
 }
 
 .wow:hover{
